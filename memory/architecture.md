@@ -9,12 +9,15 @@ just open `index.html` in a browser (or serve the folder statically).
 
 ## Files
 
-- `index.html` — the page: a title, one `<button>`, and a `<p>` status line.
+- `index.html` — the page: a title, the primary `<button>`, a `<p>` status
+  line, and a secondary "Reset" `<button>`.
 - `styles.css` — presentation: centered layout, "gummy" pill button with
-  hover / pressed / focus states, dark gradient background. Responsive via
-  `clamp()` + flexbox (works desktop and narrow mobile).
+  hover / pressed / focus states, dark gradient background, plus a
+  low-emphasis outlined `.reset-btn`. Responsive via `clamp()` + flexbox
+  (works desktop and narrow mobile).
 - `script.js` — behavior: increments a click counter and writes a
-  confirmation into the status line. IIFE, no globals.
+  confirmation into the status line; the reset control zeroes the counter and
+  restores the idle status. IIFE, no globals.
 
 ## Key design decisions
 
@@ -28,5 +31,6 @@ just open `index.html` in a browser (or serve the folder statically).
 
 ## Contract between files
 
-- `script.js` looks up `#gummigoo-btn` and `#status` by id. Keep those ids in
-  sync with `index.html` if either changes.
+- `script.js` looks up `#gummigoo-btn`, `#status`, and `#reset-btn` by id.
+  Keep those ids in sync with `index.html` if either changes. The reset button
+  is optional: its listener is guarded, so the counter still works without it.

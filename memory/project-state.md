@@ -6,8 +6,13 @@ Goals, open threads, recent decisions. Refreshed at the end of each dev session.
 
 A working single-page site (`index.html` + `styles.css` + `script.js`):
 a centered "Gummigoo" pill button that, when clicked, shows a confirmation
-message and counts clicks. Keyboard (Enter/Space), touch, hover, pressed, and
-focus states all work. No build step — open `index.html` directly.
+message and counts clicks, plus a secondary "Reset" button that zeroes the
+counter for repeat test runs. Keyboard (Enter/Space), touch, hover, pressed,
+and focus states all work. No build step — open `index.html` directly.
+
+This completes all build steps of the approved plan (skeleton → page →
+click behavior → visual states → repeat clicks → reset control → ground
+truth). The only unchecked step is a human browser smoke test (see below).
 
 ## Recent decisions
 
@@ -24,8 +29,11 @@ focus states all work. No build step — open `index.html` directly.
   This is the main blocker for meaningful next work. Flagged back to the group.
 - No tests or CI yet. Not needed for a static placeholder page, but worth
   revisiting once the button's real purpose lands.
-- Not yet opened/clicked in a real browser by a human in this session — logic
-  is simple and verified by inspection; a quick manual smoke test is advised.
+- Not yet opened/clicked in a real browser by a human in this session — no
+  browser/shell is available in the dev environment, so both the click counter
+  and the new reset control are verified by inspection only. A quick manual
+  smoke test (click a few times, hit Reset, confirm no console errors) is still
+  advised before treating this as fully proven.
 
 ## How to run
 
