@@ -32,7 +32,9 @@ just open `index.html` in a browser (or serve the folder statically).
   assistive tech.
 - The click action now **serves a random picture** (plus the running count).
   The counter is kept on purpose so the page still reads as a test rig — the
-  status line reads like "Click #7 — enjoy the pic."
+  status line reads like "Click #7 — enjoy the pic." This is still *decorative
+  placeholder* behavior — what the button should ultimately do remains an open
+  product question (see project-state.md).
 - **No back-to-back repeats** only kicks in with 2+ images; with 1 image it
   re-shows and with 0 it degrades to the old count-only behavior. No dead
   button, no infinite loop.

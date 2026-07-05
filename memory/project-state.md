@@ -34,10 +34,12 @@ a human browser smoke test (see below).
 
 ## Open threads / next decisions
 
-- The button's real purpose is now "random Gummigoo picture." If Mike wants the
-  picture to fully *replace* the counter (rather than sit alongside it), that's
-  a one-line change in `handleActivate()` — he flagged it as his call when
-  re-sending files.
+- **What should the button ultimately do? Still open.** The random-picture
+  display is *decorative placeholder* behavior — a fun stand-in VRmike asked
+  for, not the answer to what the button is really for (link, form submit, game,
+  prank, …). Don't treat "shows a random pic" as the product decision.
+  - Sub-thread: if the picture should fully *replace* the counter rather than
+    sit alongside it, that's a one-line change in `handleActivate()`.
 - No tests or CI yet. Not needed for a static placeholder page, but worth
   revisiting once the button's real purpose lands.
 - Not yet opened/clicked in a real browser by a human in this session — no
