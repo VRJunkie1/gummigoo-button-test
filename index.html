@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gummigoo Button Test</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="stage">
+    <h1 class="title">Gummigoo Button Test</h1>
+
+    <button id="gummigoo-btn" class="gummigoo-btn" type="button">
+      Gummigoo
+    </button>
+
+    <!-- aria-live so screen readers announce the result on click -->
+    <p id="status" class="status" role="status" aria-live="polite">
+      Click the button to start.
+    </p>
+
+    <!-- Random image slot: empty/hidden until the first press, filled by
+         script.js. Optional in the DOM — the script guards its lookup, like
+         the reset button. -->
+    <img id="gummigoo-img" class="gummigoo-img" alt="" hidden />
+
+    <!-- Secondary control: reset the counter for repeat test runs -->
+    <button id="reset-btn" class="reset-btn" type="button">
+      Reset
+    </button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
