@@ -75,6 +75,24 @@ body {
   opacity: 0.95;
 }
 
+/* Random image slot. `hidden` keeps it out of flow until the first click.
+   Fixed, responsive footprint + object-fit:contain so every image occupies the
+   same box regardless of its own aspect ratio — the centered layout doesn't
+   jump around as differently-sized pictures load in on each press. */
+.gummigoo-img {
+  display: block;
+  width: min(90vw, 20rem);
+  height: min(90vw, 20rem);
+  max-height: 50vh;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+.gummigoo-img[hidden] {
+  display: none;
+}
+
 /* Secondary, low-emphasis reset control */
 .reset-btn {
   font: inherit;

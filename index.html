@@ -19,6 +19,11 @@
       Click the button to start.
     </p>
 
+    <!-- Random image slot: empty/hidden until the first press, filled by
+         script.js. Optional in the DOM — the script guards its lookup, like
+         the reset button. -->
+    <img id="gummigoo-img" class="gummigoo-img" alt="" hidden />
+
     <!-- Secondary control: reset the counter for repeat test runs -->
     <button id="reset-btn" class="reset-btn" type="button">
       Reset
